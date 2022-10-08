@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ComponentA from "./Components/8. Context/ComponentA";
+import { UserProvider } from "./Components/8. Context/userContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserProvider value="Pratham">
+        <ComponentA />
+      </UserProvider>
+      {/* <Counter>
+        {(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </Counter>
+      <Counter>
+        {(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </Counter> */}
+      {/* <ClickCounterTwo /> */}
+      {/* <HoverCounterTwo /> */}
+      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Pratham" : "Guest")} /> */}
+      {/* <HoverCounter /> */}
+      {/* <ClickCounter name="Pratham" /> */}
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary> */}
+      {/* <PortalsDemo /> */}
+      {/* <FRParentInput /> */}
+      {/* <FocusInput /> */}
+      {/* <RefsDemo /> */}
+      {/* <ParentComp /> */}
+      {/* <FragmentDemo /> */}
     </div>
   );
 }
